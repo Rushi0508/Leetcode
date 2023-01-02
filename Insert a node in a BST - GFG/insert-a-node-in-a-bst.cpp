@@ -117,33 +117,19 @@ int main() {
 // Function to insert a node in a BST.
 Node* insert(Node* root, int k) {
     // Your code here
-    Node* prev = NULL;
-    Node* curr = root;
-    
-    while(curr!=NULL){
-        prev = curr;
-        if(curr->data==k){
-            return root;
-        }
-        else if(k > curr->data){
-            curr = curr->right;
-        }
-        else{
-            curr = curr->left;
-        }
+    if (root == nullptr) {
+        return new Node(k);
     }
-    if(prev->left==NULL && prev->right==NULL ){
-        if(k < prev->data)
-            prev->left = new Node(k);
-        if(k>prev->data){
-            prev->right = new Node(k);
-        }
+    if(root->data == k){
+        return root;
     }
-    else if(prev->right==NULL && prev->left!=NULL){
-        prev->right = new Node(k);
+    // if the given key is less than the root node, recur for the left subtree
+    if (k < root->data) {
+        root->left = insert(root->left, k);
     }
-    else{
-        prev->left = new Node(k);
+    // if the given key is more than the root node, recur for the right subtree
+    else if(k > root->data) {
+        root->right = insert(root->right, k);
     }
     return root;
 }
