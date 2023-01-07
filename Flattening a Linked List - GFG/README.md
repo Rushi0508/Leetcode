@@ -5,7 +5,7 @@
 (ii) a<strong>&nbsp;bottom</strong>&nbsp;pointer&nbsp;to a linked list where this node is head.<br>
 Each of the&nbsp;sub-linked-list is in sorted order.<br>
 Flatten the Link List such that all the nodes appear in a single level while maintaining the sorted order.&nbsp;</span><br>
-<span style="font-size:18px"><strong>Note:</strong> The flattened list will be printed using the bottom pointer instead of next pointer. For more clearity have a look at the printList() function in the driver code.</span></p>
+<span style="font-size:18px"><strong>Note:</strong> The flattened list will be printed using the bottom pointer instead of next pointer.</span></p>
 
 <p>&nbsp;</p>
 
