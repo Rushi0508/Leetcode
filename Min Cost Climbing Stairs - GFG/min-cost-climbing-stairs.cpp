@@ -10,17 +10,16 @@ using namespace std;
 
 class Solution {
   public:
+    
     int minCostClimbingStairs(vector<int>&cost ,int N) {
         //Write your code here
-        int prev1 = cost[0];
-        int prev2 = cost[1];
-        int curr;
+        vector<int> dp(N+1);
+        dp[0] = cost[0];
+        dp[1] = cost[1];
         for(int i=2;i<N;i++){
-            curr = cost[i] + min(prev1,prev2);
-            prev1 = prev2;
-            prev2 = curr;
+            dp[i] = cost[i] + min(dp[i-1],dp[i-2]);
         }
-        return min(prev1,prev2);
+        return min(dp[N-1],dp[N-2]);
     }
 };
 
