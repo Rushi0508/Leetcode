@@ -1,27 +1,29 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include<bits/stdc++.h>
 using namespace std;
 
 
- // } Driver Code Ends
+// } Driver Code Ends
 class Solution{
     public:
     // arr: input array
     // n: size of array
     //Function to find the sum of contiguous subarray with maximum sum.
-    long long maxSubarraySum(int arr[], int n){
+    long long maxSubarraySum(int a[], int n){
         
         // Your code here
-        int max_k=arr[0],sum=0;
-        for(int i=0;i<n;i++){
-            sum = max(arr[i],sum+arr[i]);
-            max_k = max(max_k,sum);
+        int dp[n];
+        dp[0]=a[0];
+        int big=dp[0];
+        for (int i = 1; i < n; i++) {
+            dp[i]=max(dp[i-1]+a[i],a[i]);
+            if (dp[i]>big)big=dp[i];
         }
-        return max_k;
+        return big;
     }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 
 int main()
 {
@@ -43,4 +45,5 @@ int main()
         cout << ob.maxSubarraySum(a, n) << endl;
     }
 }
-  // } Driver Code Ends
+
+// } Driver Code Ends
