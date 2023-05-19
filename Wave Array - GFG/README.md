@@ -5,6 +5,8 @@ In other words, arrange the elements into a sequence such that arr[1] &gt;= arr[
 
 <p><span style="font-size:18px">If there are multiple solutions, find the lexicographically smallest one.</span></p>
 
+<p><span style="font-size:18px"><strong>Note:</strong>The given array is sorted in ascending order, and you don't need to return anything to make changes in the original array itself.</span></p>
+
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
 <pre><span style="font-size:18px"><strong>Input:
@@ -26,8 +28,7 @@ sorting it in wave form are
 4 2 8 7 10 9.</span></pre>
 
 <p><span style="font-size:18px"><strong>Your&nbsp;Task:</strong><br>
-The task is to complete the function <strong>convertToWave</strong>(), which converts the given array to a wave array.<br>
-<strong>NOTE:</strong> The given array is sorted in ascending order, and you don't need to return anything to make changes in the original array itself.</span></p>
+The task is to complete the function <strong>convertToWave</strong>(), which converts the given array to a wave array.</span></p>
 
 <p><span style="font-size:18px"><strong>Expected Time Complexity:&nbsp;</strong>O(n).<br>
 <strong>Expected Auxiliary Space:&nbsp;</strong>O(1).</span></p>
